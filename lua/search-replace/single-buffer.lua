@@ -17,7 +17,9 @@ M.search_replace = function(pattern)
 	vim.cmd(
 		':call feedkeys(":%s/'
 			.. util.double_escape(pattern)
-			.. "//"
+			.. "/"
+      .. util.double_escape(pattern)
+      .. "/"
 			.. config.options["default_replace_single_buffer_options"]
 			.. left_keypresses
 			.. '")'
@@ -41,7 +43,9 @@ M.visual_charwise_selection = function()
 			.. backspace_keypresses
 			.. "%s/"
 			.. util.double_escape(visual_selection)
-			.. "//"
+			.. "/"
+			.. util.double_escape(visual_selection)
+			.. "/"
 			.. config.options["default_replace_single_buffer_options"]
 			.. left_keypresses
 			.. '")'
