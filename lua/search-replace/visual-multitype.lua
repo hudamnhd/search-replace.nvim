@@ -18,7 +18,9 @@ local within = function(pattern)
 	vim.cmd(
 		':call feedkeys(":s/'
 			.. util.double_escape(pattern)
-			.. "//"
+			.. "/"
+			.. util.double_escape(pattern)
+			.. "/"
 			.. config.options["default_replace_single_buffer_options"]
 			.. left_keypresses
 			.. '")'
