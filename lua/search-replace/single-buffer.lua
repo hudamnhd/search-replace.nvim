@@ -18,8 +18,8 @@ M.search_replace = function(pattern)
 		':call feedkeys(":%s/'
 			.. util.double_escape(pattern)
 			.. "/"
-      .. util.double_escape(pattern)
-      .. "/"
+			.. util.double_escape(pattern)
+			.. "/"
 			.. config.options["default_replace_single_buffer_options"]
 			.. left_keypresses
 			.. '")'
@@ -54,6 +54,12 @@ end
 
 M.open = function()
 	M.search_replace("")
+end
+
+M.opr = function()
+	require("utils.helper").get_range(function(result)
+		M.search_replace(result)
+	end)
 end
 
 M.cword = function()

@@ -11,6 +11,7 @@ local function setup_commands_single_buffer()
 	cmd("SearchReplaceSingleBufferSelections", ui.single_buffer_selections, {})
 
 	cmd("SearchReplaceSingleBufferOpen", single_buffer.open, {})
+	cmd("SearchReplaceSingleBufferOpr", single_buffer.opr, {})
 	cmd("SearchReplaceSingleBufferCWord", single_buffer.cword, {})
 	cmd("SearchReplaceSingleBufferCWORD", single_buffer.cWORD, {})
 	cmd("SearchReplaceSingleBufferCExpr", single_buffer.cexpr, {})
