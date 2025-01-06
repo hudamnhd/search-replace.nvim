@@ -8,7 +8,7 @@ local cmd = vim.api.nvim_create_user_command
 local function setup_commands_single_buffer()
 	local single_buffer = require("search-replace.single-buffer")
 
-	cmd("SearchReplaceSingleBufferSelections", ui.single_buffer_selections, {})
+	-- cmd("SearchReplaceSingleBufferSelections", ui.single_buffer_selections, {})
 
 	cmd("SearchReplaceSingleBufferOpen", single_buffer.open, {})
 	cmd("SearchReplaceSingleBufferOpr", single_buffer.opr, {})
@@ -61,7 +61,7 @@ M.setup = function(options)
 	end
 
 	setup_commands_single_buffer()
-	setup_commands_multi_buffer()
+	-- setup_commands_multi_buffer()
 	setup_commands_visual_selections()
 end
 
